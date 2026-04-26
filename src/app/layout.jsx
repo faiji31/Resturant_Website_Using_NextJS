@@ -28,13 +28,15 @@ export default function RootLayout({ children }) {
         <header className="px-3 py-4 justify-between flex gap-5 bg-amber-700">
           <img src="/logo.jpg" alt="Logo" className="w-[80px]" />
           <div className="space-x-5">
-            <Link className="p-3 bg-red-500 font-bold rounded text-black hover:bg-amber-950 duration-200 " href="/foods">Foods</Link>
-            <Link className="p-3 bg-red-500 font-bold rounded text-black hover:bg-amber-950 duration-200 " href="/reviews">Reviews</Link>
+            <Link className="p-3 b-2 bg-red-500 font-bold rounded text-black hover:bg-amber-950 duration-200 " href="/foods">Foods</Link>
+            <Link className="p-3 b-2 bg-red-500 font-bold rounded text-black hover:bg-amber-950 duration-200 " href="/reviews">Reviews</Link>
           </div>
 
         </header>
         
-        {children}
+        <main className="px-5 py-8">
+          {children}
+        </main>
 
 
       </body>
