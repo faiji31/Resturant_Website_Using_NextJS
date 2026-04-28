@@ -25,8 +25,10 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
 
-        <header className="px-3 py-4 justify-between flex gap-5 bg-amber-700">
-          <img src="/logo.jpg" alt="Logo" className="w-[80px]" />
+        <header className="px-3 py-4 justify-between flex gap-5 items-center bg-amber-700">
+          <Link href="/">
+            <img src="/logo.jpg" alt="Logo" className="w-[80px]" />
+          </Link>
           <div className="space-x-5">
             <Link className="p-3 b-2 bg-red-500 font-bold rounded text-black hover:bg-amber-950 duration-200 " href="/foods">Foods</Link>
             <Link className="p-3 b-2 bg-red-500 font-bold rounded text-black hover:bg-amber-950 duration-200 " href="/reviews">Reviews</Link>
