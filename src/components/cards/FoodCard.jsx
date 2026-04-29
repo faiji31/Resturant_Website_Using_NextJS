@@ -41,7 +41,7 @@ export default function FoodCard({ food }) {
                 {/* Buttons */}
                 <div className="flex gap-3">
 
-                   <CartButton></CartButton>
+                   <CartButton food={food}></CartButton>
 
                     <Link
                         href={`/foods/${id}`}

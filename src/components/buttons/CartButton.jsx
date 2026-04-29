@@ -1,10 +1,14 @@
 "use client"
-import React, { useState } from 'react'
+import { CartContext } from '@/context/CartProviderContext'
+import React, { use, useState } from 'react'
 
-const CartButton = () => {
+const CartButton = ({food}) => {
     const [inCart,setIncart] = useState(false)
-    const handleaddtocart=()=> {
-       setIncart(true)
+    const {addtoCart} = use(CartContext)
+
+    const handleaddtocart =()=>{
+      addtoCart(food)
+      setIncart(true)
     }
   return (
       <button disabled={inCart} onClick={handleaddtocart} className="flex-1 bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-xl font-semibold shadow-md transition disabled:bg-gray-400">
