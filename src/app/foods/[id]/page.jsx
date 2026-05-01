@@ -17,6 +17,11 @@ const getSingleFood = async (id) => {
     return data.details;
 };
 
+export const metadata = {
+    title: "Food Details",
+    description: "Best Fast Food in Town",
+};
+
 async function FoodDetails({ params }) {
     const { id } = await params;
     const food = await getSingleFood(id);
