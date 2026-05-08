@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ReviewCard({ review }) {
     const {
         user,
@@ -13,11 +15,13 @@ export default function ReviewCard({ review }) {
 
             {/* User */}
             <div className="flex items-center gap-4 mb-5">
-                <img
+                {/* <img
                     src={photo}
                     alt={user}
                     className="w-16 h-16 rounded-full object-cover border-4 border-orange-100"
-                />
+                /> */}
+
+                <Image src={photo} alt={user} width={64} height={64} className="w-16 h-16 rounded-full object-cover border-4 border-orange-100" />
 
                 <div className="flex-1">
                     <h3 className="text-lg font-bold text-gray-800">

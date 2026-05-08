@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CartButton from "../buttons/CartButton";
+import Image from "next/image";
 
 export default function FoodCard({ food }) {
     const { id, title, foodImg, category, price } = food;
@@ -9,11 +10,13 @@ export default function FoodCard({ food }) {
 
             {/* Image */}
             <div className="relative overflow-hidden">
-                <img
+                {/* <img
                     src={foodImg}
                     alt={title}
                     className="w-full h-64 object-cover group-hover:scale-110 transition duration-500"
-                />
+                /> */}
+
+                <Image src={foodImg} alt={title} width={400} height={300} className="w-full h-64 object-cover group-hover:scale-110 transition duration-500" />
 
                 {/* Category Badge */}
                 <span className="absolute top-4 left-4 bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow">

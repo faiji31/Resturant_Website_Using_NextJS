@@ -1,6 +1,12 @@
 "use client"
 import ReviewCard from '@/components/cards/Reviewcard'
+import { Anek_Bangla } from 'next/font/google'
 import React, { useEffect, useState } from 'react'
+
+
+const anek = Anek_Bangla({
+    weight:["400","500","700"]
+})
 
 
 
@@ -16,7 +22,7 @@ const  ReviewsPage =() => {
 
  
   return (
-    <div>
+    <div className={anek.className}>
       <h2 className='text-4xl font-bold'> Total Reviews: <span className='text-green-800'>{reviews.length} </span> Found</h2>
       
             <div className='grid grid-cols-3 gap-5 my-5'>
