@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import CartProviderContext from "@/context/CartProviderContext";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Safelo Resturant",
+  title: {
+    default: "taxi Kitchen",
+    template: "%s | Taxi Kitchen"
+  },
   description: "Best Fast Food in Town",
 };
 
@@ -28,10 +32,12 @@ export default function RootLayout({ children }) {
 
         <header className="px-3 py-4 justify-between flex gap-5 items-center bg-amber-700">
           <Link href="/">
-            <img src="/logo.jpg" alt="Logo" className="w-[80px]" />
+            {/* <img src="/logo.jpg" alt="Logo" className="w-[80px]" /> */}
+
+            <Image src="/logo.jpg" alt="Logo"  width={80} height={80} />
           </Link>
           <div className="space-x-5">
-            <Link className="p-3 b-2 bg-red-500 font-bold rounded text-black hover:bg-amber-950 duration-200 " href="/foods">Foods</Link>
+            <Link prefetch={false} className="p-3 b-2 bg-red-500 font-bold rounded text-black hover:bg-amber-950 duration-200 " href="/foods">Foods</Link>
             <Link className="p-3 b-2 bg-red-500 font-bold rounded text-black hover:bg-amber-950 duration-200 " href="/reviews">Reviews</Link>
           </div>
 
